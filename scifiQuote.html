@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<!-- HTML for the button -->
+<button id="quote-button">Random Sci-fi Quote</button>
+
+<!-- HTML for the container where the quote will be displayed -->
+<div id="quote-container"></div>
+
+<!-- CSS for styling the button and container -->
+<style>
+  #quote-button {
+    /* Position the button in the center of the screen */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Style the button with a modern look */
+    background-color: #222222;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+  }
+
+  #quote-container {
+    /* Style the quote container with a modern look */
+    font-style: italic;
+    font-size: 16px;
+    color: #222222;
+    text-align: center;
+  }
+</style>
+
+<!-- JavaScript for fetching and displaying the quote -->
+<script>
+  const quoteButton = document.getElementById('quote-button');
+  const quoteContainer = document.getElementById('quote-container');
+
+  // An array of sci-fi quotes to choose from
+  const quotes = [
+    "I'm the Doctor, and you're in the biggest library in the universe. Look me up. - Doctor Who",
+    "The truth is out there. It's just extremely well-hidden. - The X-Files",
+    "Space is the only place I can breathe. - Firefly",
+    "Don't try to be a great man. Just be a man, and let history make its own judgments. - Battlestar Galactica",
+    "The sky calls to us. If we do not destroy ourselve, we will one day venture to the stars. - Contact",
+    "The universe is a crue, uncaring void. The key to being happy isn't the search for meaning. It's just to keep yourself busy with unimportant 
+nonsens, and eventually you'll be dead. - The Hitchhiker's Guide to the Galaxy",
+    "The only thing that's better than space travel is free space travel. - The Expanse",
+    "The first rule of space travel is to never let them see you sweat. - Gravity",
+    "In space, no one can hear you scream. - Alien",
+    "Space is big. Really big. You just won't believe how vastly, hugely, mind-bogglingly big it is. - The Hitchhiker's, Guide to the Galaxy",
+    "Space is full of mystery, but the greatest mystery of all is what's out there waiting for us. - Star Trek",
+    "The future is out their, waiting for us to shape it. Let's make it a good one. - The Jetsons",
+    "Space is the final frontier. It's where we'll find our greatest challenges and our greatest opportunities. - Star Trek",
+    "Space is not just the final frontier. It's also the greatest adventure we'll ever have. - Stargate SG-1",
+    "In space, no one can hear you dream. - The Fifth Element",
+    "In space, no one can hear you sing. - The Martian",
+    "In space, no one can hear you laugh. - Futurama",
+    "In space, no one can hear you cry. - Gravity",
+    "In space, no one can hear you scream... unless you have a microphone. - Wall-E",
+    "In space, no one can hear you sneeze... unless you have a really loud sneeze. - The Iron Giant",
+    "In space, no one can hear you burp... unless you have a really loud burp. - Guardians of the Galaxy",
+    "In space, no one can hear you fart... unless you have a really loud fart. - Mars Attacks!",
+    "In space, no one can hear you... because there is no sound in space. - Star Wars",
+    "In space, no one can see you... unless you have a really bright light. - Transformers",
+    "In space, no one can smell you... unless you have a really strong odor. - Star Wars: Episode I - The Phantom Menace",
+    "To infinity and beyond. - Buzz Lightyear, Toy Story",
+    "One small step for man, one giant leap for mankind. - Neil Armstrong, Apollo 11",
+    "The future is here. It's just not evenly distributed yet. - William Gibson",
+    "The future is already here. It's just not evenly distributed. - William Gibson",
+    "The future is something that everyone reaches at the rate of sixty minutes an hour, whatever he does, whoever he is. - C. S. Lewis",
+    "The future is not something that happens to us, its something we create. - L. Ron Hubbard",
+    "It is not the strongest of the species that survive, nor the most intelligent, but the one most responsive to change. - L.E. Modesitt Jr.",
+    "When a distinguished but elderly scientist states that something is possible, he is almost certainly right. When he states that something 
+is, impossible, he is very probably wrong. - Poul Anderson",
+    "The only way to discover the limits of the possible is to go beyond them into the impossible. - Arthur C. Clarke",
+    "I may not have gone where I intended to go, but I think I have ended up where I needed to be. - Douglas Adams",
+    "The most exciting phrase to hear in science, the one that heralds new discovery, is not Eureka! but..Thats funny....Isaac Asimov",
+    "Any sufficiently advanced technology is indistinguishable from magic. - Arthur C. Clarke",
+    "I never learned from a man who agreed with me. - Robert A. Heinlein",
+    "The difference between science and the fuzzy subjects is that science requires reasoning, while those other subjects merely require 
+scholarship. - Robert A. Heinlein",
+    "The only way to discover the limits of the possible is to go beyond them into the impossible. - Arthur C. Clarke",
+
+  ];
+
+  quoteButton.addEventListener('click', () => {
+    // Choose a random quote from the array
+    const quote = quotes[Math.floor(Math.random() * quotes.length)];
+
+    // Set the text content of the quote container to the selected quote
+    quoteContainer.textContent = quote;
+  });
+</script>
+
+
+</body>
+
+</html>
